@@ -14,6 +14,7 @@ export class BaseElement {
         this.element.style.width = `${this.size}px`;
         this.element.style.border = `2px solid black`;
         this.element.style.borderRadius = '5px'
+        this.element.style.cursor = 'pointer'
 
         this.element.addEventListener('mouseenter', ()=>{
             this.element.style.border = "5px solid black"
@@ -21,8 +22,8 @@ export class BaseElement {
         this.element.addEventListener('mouseleave', ()=>{
             this.element.style.border = "2px solid black"
         })
-        this.element.addEventListener('click', ()=>{
-            if (this.element.style.background==='green') {
+        this.element.addEventListener('click', async () => {
+            if (this.element.style.background === 'green') {
                 this.element.style.display = 'none'
                 this.game.totalElements--
                 if (this.game.totalElements === this.game.avoidElement) {
@@ -34,9 +35,5 @@ export class BaseElement {
         })
 
         document.body.appendChild(this.element)
-    }
-
-    greenCheck() {
-        this.game.elements.forEach()
     }
 }

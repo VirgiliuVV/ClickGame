@@ -43,6 +43,7 @@ startButton.addEventListener('mouseenter', ()=>{
     startButton.style.backgroundColor = '#ACBAE6'
     startButton.style.marginLeft = '3px'
     startButton.style.marginTop = '3px'
+    startButton.style.cursor = 'pointer'
 })
 startButton.addEventListener('mouseleave', ()=>{
     startButton.style.backgroundColor = 'lightblue'
