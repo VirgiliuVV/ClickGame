@@ -32,7 +32,7 @@ const collection = db.collection(process.env.MONGO_COLLECTION.toString());
 console.log('Using collection:', collection.collectionName);
 
 
-app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html', 'css', 'js'] }));
+app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html', 'js'] }));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));

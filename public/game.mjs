@@ -35,7 +35,9 @@ export class Game {
 
     async gameWin() {
         this.yourTime = this.time
+        this.timerOff()
         this.clearScreen();
+        //create and place the logo of wining image
         this.winLogo()
 
         const table = this.createTable('TOP LIST!');
@@ -60,6 +62,7 @@ export class Game {
 
     }
 
+
     winLogo() {
         const winImage = document.createElement('img')
         winImage.style.width = '130px'
@@ -68,6 +71,7 @@ export class Game {
 
         document.body.appendChild(winImage)
     }
+
     createList(name, time, index) {
         const tableDataBox = document.createElement('div')
         tableDataBox.style.fontFamily = 'Montserrat'
@@ -290,10 +294,14 @@ export class Game {
         document.body.appendChild(timerScore)
 
         this.time = 0
-        setInterval(() => {
+        this.timerInterval = setInterval(() => {
             this.time++;
             const formattedTime = (this.time / 100).toFixed(2);
             timerScore.innerHTML = 'Time: ' + formattedTime;
         }, 10)
+    }
+
+    timerOff() {
+        clearInterval(this.timerInterval);
     }
 }

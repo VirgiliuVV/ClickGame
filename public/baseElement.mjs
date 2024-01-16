@@ -5,6 +5,7 @@ export class BaseElement {
         this.interval = 50;
         this.speed = Math.floor(Math.random()*3)+1;
         this.size = Math.floor(Math.random() * 50) + 40;
+        this.spawnElement()
     }
 
     spawnElement() {

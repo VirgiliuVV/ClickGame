@@ -3,7 +3,6 @@ import {BaseElement} from "./baseElement.mjs";
 export class ChangeElement extends BaseElement {
     constructor(game) {
         super(game);
-        this.spawnElement();
     }
 
     spawnElement() {

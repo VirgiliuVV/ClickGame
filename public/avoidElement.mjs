@@ -3,7 +3,6 @@ import {BaseElement} from "./baseElement.mjs";
 export class AvoidElement extends BaseElement {
     constructor(game) {
         super(game);
-        this.spawnElement();
     }
 
     spawnElement() {
