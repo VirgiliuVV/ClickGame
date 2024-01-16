@@ -34,5 +34,9 @@ npm start
 ```
 This will start the game on your local server. Open your browser and go to http://localhost:3000 to play the game.
 
+# How to play
+
+Play the game using your mouse cursor. Click on the green elements while avoiding the red ones. The game ends if you click on any red element. Enjoy!
+
 # Contributing
 We welcome contributions! If you have any ideas for improvements or new features, feel free to open an issue or submit a pull request.
